@@ -1,0 +1,19 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  border: 1px solid;
+  padding: 10px 15px;
+}
+
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50px;
+}

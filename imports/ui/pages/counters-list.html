@@ -1,0 +1,40 @@
+<template name="countersList">
+  <div class="container">
+    <header>
+      <h1>Список счетчиков</h1>
+      {{#if currentUser}}
+        <button name="logout">Выйти</button>
+      {{/if}}
+      <hr>
+    </header>
+
+    <button name="createCounter">Создать счетчик</button>
+
+    <div>
+      {{#each counters}}
+        {{> counter}}
+      {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="counter">
+  <div class="counter-container">
+    <div class="counter-item">
+      <div>
+        Название: {{name}}
+      </div>
+      <div>
+        Владлец: {{username}}
+      </div>
+    </div>
+    <div class="counter-item">
+      <div>
+        <button name="inc">+</button>
+        {{count}}
+        <button name="dec">-</button>
+      </div>
+      <button name="delete">Удалить</button>
+    </div>
+  </div>
+</template>
